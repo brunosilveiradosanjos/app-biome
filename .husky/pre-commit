@@ -1,0 +1,2 @@
+npx @biomejs/biome format --write ./src
+npx @biomejs/biome lint --write ./src
