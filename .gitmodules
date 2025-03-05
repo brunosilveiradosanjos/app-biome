@@ -1,0 +1,3 @@
+[submodule "lib/workspace-financeira-scd"]
+	path = lib/workspace-financeira-scd
+	url = https://github.com/brunosilveiradosanjos/workspace-financeira-scd
