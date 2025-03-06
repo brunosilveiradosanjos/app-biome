@@ -17,6 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "preserveSymlinks": true,
+            "allowedCommonJsDependencies": ["lib-turbo-components-scd"],
             "outputPath": "dist/app-biome",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -26,7 +28,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "lib/workspace-financeira-scd/dist/lib-turbo-components-scd",
+                "output": "lib-turbo-components-scd"
               }
             ],
             "styles": ["src/styles.scss"],
@@ -92,6 +95,29 @@
             "styles": ["src/styles.scss"],
             "scripts": []
           }
+        }
+      }
+    },
+    "lib-turbo-components-scd": {
+      "projectType": "library",
+      "root": "lib/workspace-financeira-scd/projects/lib-turbo-components-scd",
+      "sourceRoot": "lib/workspace-financeira-scd/projects/lib-turbo-components-scd/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "lib/workspace-financeira-scd/projects/lib-turbo-components-scd/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "lib/workspace-financeira-scd/projects/lib-turbo-components-scd/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "lib/workspace-financeira-scd/projects/lib-turbo-components-scd/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
