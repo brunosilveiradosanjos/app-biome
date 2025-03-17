@@ -32,7 +32,10 @@
                 "output": "lib-turbo-components-scd"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss",
+              "lib/workspace-financeira-scd/dist/tailwind.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -92,7 +95,10 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss",
+              "lib/workspace-financeira-scd/dist/tailwind.css"
+            ],
             "scripts": []
           }
         }
